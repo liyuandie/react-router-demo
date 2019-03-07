@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import { Basic, Parameters, Redirects } from './demos'
+import { Basic, Parameters, Redirects, CustomLink, PreventingTransition, NoMatch } from './demos'
 
 class App extends Component {
   render() {
@@ -21,12 +21,24 @@ class App extends Component {
             <span className="title">
               <Link to="/redirects">Redirect(Auth)</Link>
             </span>
+            <span className="title">
+              <Link to="/custom-link">自定义Link</Link>
+            </span>
+            <span className="title">
+              <Link to="/preventing-transitions">防止场景转换</Link>
+            </span>
+            <span className="title">
+              <Link to="/no-match">No Match(Switch)</Link>
+            </span>
           </div>
           <hr />
           {/* <Route path="/:type" component={Demos} /> */}
           <Route path="/basic" component={Basic} />
           <Route path="/url-parameters" component={Parameters} />
           <Route path="/redirects" component={Redirects} />
+          <Route path="/custom-link" component={CustomLink} />
+          <Route path="/no-match" component={NoMatch} />
+          <Route path="/preventing-transitions" component={PreventingTransition} />
           <Route path="/" exact render={() => <h3>请选择一个demo</h3>} />
         </div>
       </Router>

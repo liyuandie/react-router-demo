@@ -83,6 +83,7 @@ class Redirects extends Component {
             <Link to={`${url}/protected`}>Protected Page</Link>
           </li>
         </ul>
+        <hr />
         <Route path={`${path}/public`} component={this.Public} />
         <Route path={`${path}/login`} component={this.Login} />
         <this.PrivateRoute path={`${path}/protected`} component={this.Protected} />
@@ -113,11 +114,11 @@ const fakeAuth = {
   isAuthenticated: false,
   authenticate(cb) {
     this.isAuthenticated = true
-    setTimeout(cb, 1000)
+    setTimeout(cb, 100)
   },
   signout(cb) {
     this.isAuthenticated = false
-    setTimeout(cb, 1000)
+    setTimeout(cb, 100)
   }
 }
 
