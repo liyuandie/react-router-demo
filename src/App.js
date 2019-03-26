@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import { Basic, Parameters, Redirects, CustomLink, PreventingTransition, NoMatch } from './demos'
+import { Basic, Parameters, Redirects, CustomLink, PreventingTransition, NoMatch, CourseTimeTable } from './demos'
 
 class App extends Component {
   render() {
@@ -30,6 +30,9 @@ class App extends Component {
             <span className="title">
               <Link to="/no-match">No Match(Switch)</Link>
             </span>
+            <span className="title">
+              <Link to="/course-timetable">课表</Link>
+            </span>
           </div>
           <hr />
           {/* <Route path="/:type" component={Demos} /> */}
@@ -38,6 +41,7 @@ class App extends Component {
           <Route path="/redirects" component={Redirects} />
           <Route path="/custom-link" component={CustomLink} />
           <Route path="/no-match" component={NoMatch} />
+          <Route path="/course-timetable" component={CourseTimeTable} />
           <Route path="/preventing-transitions" component={PreventingTransition} />
           <Route path="/" exact render={() => <h3>请选择一个demo</h3>} />
         </div>

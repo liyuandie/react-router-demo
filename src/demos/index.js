@@ -4,5 +4,6 @@ import Redirects from './Redirects'
 import CustomLink from './CustomLink'
 import PreventingTransition from './PreventingTransition'
 import NoMatch from './NoMatch'
+import CourseTimeTable from './CourseTimetable'
 
-export { Basic, Parameters, Redirects, CustomLink, PreventingTransition, NoMatch }
+export { Basic, Parameters, Redirects, CustomLink, PreventingTransition, NoMatch, CourseTimeTable }

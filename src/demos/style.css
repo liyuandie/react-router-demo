@@ -1,3 +1,14 @@
 .demo-container {
   width: 70%;
 }
+.table-text {
+  /* font-size: 13px; */
+  padding: 0px;
+}
+.tag {
+  margin-top: 5px;
+}
+/* .img {
+  width: 40px;
+  height: 40px;
+} */
