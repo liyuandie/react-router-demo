@@ -2,7 +2,17 @@ import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-import { Basic, Parameters, Redirects, CustomLink, PreventingTransition, NoMatch, CourseTimeTable } from './demos'
+import {
+  Basic,
+  Parameters,
+  Redirects,
+  CustomLink,
+  PreventingTransition,
+  NoMatch,
+  RecursivePath,
+  Sidebar,
+  RouteConfig
+} from './demos'
 
 class App extends Component {
   render() {
@@ -31,18 +41,25 @@ class App extends Component {
               <Link to="/no-match">No Match(Switch)</Link>
             </span>
             <span className="title">
-              <Link to="/course-timetable">课表</Link>
+              <Link to="/recursive-path">Recursive Path</Link>
+            </span>
+            <span className="title">
+              <Link to="/sidebar">Sidebar</Link>
+            </span>
+            <span className="title">
+              <Link to="/route-config">Route Config</Link>
             </span>
           </div>
           <hr />
-          {/* <Route path="/:type" component={Demos} /> */}
           <Route path="/basic" component={Basic} />
           <Route path="/url-parameters" component={Parameters} />
           <Route path="/redirects" component={Redirects} />
           <Route path="/custom-link" component={CustomLink} />
           <Route path="/no-match" component={NoMatch} />
-          <Route path="/course-timetable" component={CourseTimeTable} />
           <Route path="/preventing-transitions" component={PreventingTransition} />
+          <Route path="/recursive-path" component={RecursivePath} />
+          <Route path="/sidebar" component={Sidebar} />
+          <Route path="/route-config" component={RouteConfig} />
           <Route path="/" exact render={() => <h3>请选择一个demo</h3>} />
         </div>
       </Router>
